@@ -6,3 +6,11 @@ C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Debug\netcoreapp3.1\
 C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.AssemblyInfo.cs
 C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.dll
 C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\bin\Debug\netcoreapp3.1\Rettit.Models.deps.json
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\bin\Debug\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\bin\Debug\netcoreapp3.1\Rettit.Models.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.pdb
