@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rettit.API", "Rettit.API\Rettit.API.csproj", "{A27A12A2-9E6C-4D07-AB51-301744C5EEC2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABC76435-2534-4379-9A56-5A126CBF97DF} = {ABC76435-2534-4379-9A56-5A126CBF97DF}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rettit.Models", "Rettit.Models\Rettit.Models.csproj", "{ABC76435-2534-4379-9A56-5A126CBF97DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rettit.DAL", "Rettit.DAL\Rettit.DAL.csproj", "{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABC76435-2534-4379-9A56-5A126CBF97DF} = {ABC76435-2534-4379-9A56-5A126CBF97DF}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reddit.Logic", "Reddit.Logic\Reddit.Logic.csproj", "{EE44BD91-DDA8-42BD-9603-5C1F0893C139}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABC76435-2534-4379-9A56-5A126CBF97DF} = {ABC76435-2534-4379-9A56-5A126CBF97DF}
+		{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E} = {2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A27A12A2-9E6C-4D07-AB51-301744C5EEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27A12A2-9E6C-4D07-AB51-301744C5EEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27A12A2-9E6C-4D07-AB51-301744C5EEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27A12A2-9E6C-4D07-AB51-301744C5EEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC76435-2534-4379-9A56-5A126CBF97DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC76435-2534-4379-9A56-5A126CBF97DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC76435-2534-4379-9A56-5A126CBF97DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC76435-2534-4379-9A56-5A126CBF97DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8AC2A7-FCF6-41BE-A365-C89C56E0BE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE44BD91-DDA8-42BD-9603-5C1F0893C139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE44BD91-DDA8-42BD-9603-5C1F0893C139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE44BD91-DDA8-42BD-9603-5C1F0893C139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE44BD91-DDA8-42BD-9603-5C1F0893C139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF0BDE3F-7157-4FF4-BF4A-3F446E4B3604}
+	EndGlobalSection
+EndGlobal

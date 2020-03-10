@@ -1,0 +1,11 @@
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\bin\Debug\netcoreapp3.1\Rettit.DAL.deps.json
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\bin\Debug\netcoreapp3.1\Rettit.DAL.dll
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\bin\Debug\netcoreapp3.1\Rettit.DAL.pdb
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\bin\Debug\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\bin\Debug\netcoreapp3.1\Rettit.Models.pdb
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.dll
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.pdb

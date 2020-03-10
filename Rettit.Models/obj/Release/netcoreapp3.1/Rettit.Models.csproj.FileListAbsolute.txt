@@ -1,0 +1,8 @@
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\bin\Release\netcoreapp3.1\Rettit.Models.deps.json
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\bin\Release\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\bin\Release\netcoreapp3.1\Rettit.Models.pdb
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Release\netcoreapp3.1\Rettit.Models.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Release\netcoreapp3.1\Rettit.Models.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Release\netcoreapp3.1\Rettit.Models.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Release\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.UI\Rettit.Models\obj\Release\netcoreapp3.1\Rettit.Models.pdb
