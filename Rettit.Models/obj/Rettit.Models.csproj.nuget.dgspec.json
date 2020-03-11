@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {}
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
         "projectName": "Rettit.Models",
-        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
