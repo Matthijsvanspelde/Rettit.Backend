@@ -287,10 +287,15 @@ C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.csprojAssemblyReference.cache
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\staticwebassets\Rettit.API.StaticWebAssets.Manifest.cache
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\staticwebassets\Rettit.API.StaticWebAssets.xml
-C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.AssemblyInfoInputs.cache
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.AssemblyInfo.cs
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.RazorTargetAssemblyInfo.cache
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.csproj.CopyComplete
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.dll
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.MvcApplicationPartsAssemblyInfo.cache

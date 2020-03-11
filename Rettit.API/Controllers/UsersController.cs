@@ -5,11 +5,14 @@ using Rettit.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 
 namespace Rettit.API.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowSpecificOrigin", "*", "*")]
     public class UsersController : ControllerBase
     {
         private readonly UserContext _context;
@@ -76,7 +79,7 @@ namespace Rettit.API.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser([FromForm]User user)
+        public async Task<ActionResult<User>> PostUser([FromBody]User user)
         {
             _context.User.Add(user);
             await _context.SaveChangesAsync();

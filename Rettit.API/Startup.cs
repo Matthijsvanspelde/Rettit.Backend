@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Rettit.DAL;
+using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Rettit.API
 {
@@ -20,6 +22,13 @@ namespace Rettit.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("https://localhost:44339"));
+            });
+
+            services.AddMvc();
             services.AddDbContext<UserContext>(opt =>
                opt.UseInMemoryDatabase("User"));
             services.AddControllers();
@@ -32,6 +41,12 @@ namespace Rettit.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseCors(builder =>
+            builder.WithOrigins("https://localhost:44339")
+           .AllowAnyHeader()
+
+            );
 
             app.UseHttpsRedirection();
 
