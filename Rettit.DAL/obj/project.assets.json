@@ -4942,23 +4942,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Matthijs\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
       "projectName": "Rettit.DAL",
-      "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
-      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\obj\\",
+      "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
+      "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4971,8 +4967,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
+            "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+              "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
             }
           }
         }
