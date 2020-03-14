@@ -1,19 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Rettit.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Rettit.DAL
 {
     public class UserContext : DbContext, IUserContext
     {
-        public UserContext(DbContextOptions<UserContext> options)
-            : base(options)
+        public DbSet<User> User { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) 
         {
+            base.OnConfiguring(dbContextOptionsBuilder);
+            dbContextOptionsBuilder.UseSqlServer(@"Data Source=mssql.fhict.local;Initial Catalog=dbi404906_rettit;User ID=dbi404906_rettit;Password=123");
         }
 
-        public DbSet<User> User { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
 
         public User AddUser(User user) 
         {
@@ -22,9 +23,6 @@ namespace Rettit.DAL
             return user;
         }
 
-        public IEnumerable<User> GetUser()
-        {
-            return User;
-        }
+        public IEnumerable<User> GetUser() => User;
     }
 }

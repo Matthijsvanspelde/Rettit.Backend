@@ -1,16 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Reddit.Logic;
-using Rettit.DAL;
 using Rettit.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Http.Cors;
 
 namespace Rettit.API.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("AllowSpecificOrigin", "*", "*")]
