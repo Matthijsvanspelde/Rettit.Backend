@@ -4961,19 +4961,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Matthijs\\.nuget\\packages\\": {}
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
       "projectName": "Reddit.Logic",
-      "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
-      "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\obj\\",
+      "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4986,11 +4990,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
-              "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
+            "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
             },
-            "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
-              "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
+            "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
             }
           }
         }

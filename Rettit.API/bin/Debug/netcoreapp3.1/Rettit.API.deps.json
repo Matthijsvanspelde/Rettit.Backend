@@ -28,6 +28,7 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
+          "Reddit.Logic": "1.0.0",
           "Rettit.DAL": "1.0.0",
           "Rettit.Models": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -2376,6 +2377,18 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Reddit.Logic/1.0.0": {
+        "dependencies": {
+          "Rettit.DAL": "1.0.0",
+          "Rettit.Models": "1.0.0"
+        },
+        "runtime": {
+          "Reddit.Logic.dll": {}
+        },
+        "compile": {
+          "Reddit.Logic.dll": {}
         }
       },
       "Rettit.DAL/1.0.0": {
@@ -5215,6 +5228,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Reddit.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Rettit.DAL/1.0.0": {
       "type": "project",

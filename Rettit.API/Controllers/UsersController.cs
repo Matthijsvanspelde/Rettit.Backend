@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Reddit.Logic;
 using Rettit.DAL;
 using Rettit.Models;
 using System.Collections.Generic;
@@ -15,20 +16,21 @@ namespace Rettit.API.Controllers
     [EnableCors("AllowSpecificOrigin", "*", "*")]
     public class UsersController : ControllerBase
     {
-        private readonly UserContext _context;
-
-        public UsersController(UserContext context)
+        private readonly IUserLogic _userLogic;
+        public UsersController(IUserLogic userLogic)
         {
-            _context = context;
+            _userLogic = userLogic;
         }
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUser()
+        public ActionResult<IEnumerable<User>> GetUser()
         {
-            return await _context.User.ToListAsync();
+            IEnumerable<User> users = _userLogic.GetUser();
+            return users.ToList();
         }
 
+        /*
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(long id)
@@ -74,20 +76,15 @@ namespace Rettit.API.Controllers
 
             return NoContent();
         }
-
+        */
         // POST: api/Users
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser([FromBody]User user)
+        public ActionResult<User> PostUser([FromBody]User user)
         {
-            _context.User.Add(user);
-            await _context.SaveChangesAsync();
-
-            //return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            _userLogic.AddUser(user);
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
-
+        /*
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<User>> DeleteUser(long id)
@@ -108,5 +105,6 @@ namespace Rettit.API.Controllers
         {
             return _context.User.Any(e => e.Id == id);
         }
+        */
     }
 }

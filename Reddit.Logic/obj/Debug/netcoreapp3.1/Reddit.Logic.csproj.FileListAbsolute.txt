@@ -1,0 +1,13 @@
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Reddit.Logic.deps.json
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Reddit.Logic.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Reddit.Logic.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Rettit.DAL.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Rettit.Models.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Rettit.DAL.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\bin\Debug\netcoreapp3.1\Rettit.Models.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.pdb

@@ -452,3 +452,5 @@ C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.API\obj\Debug\netcoreap
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.csproj.CopyComplete
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.dll
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.API\obj\Debug\netcoreapp3.1\Rettit.API.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\Reddit.Logic.dll
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.API\bin\Debug\netcoreapp3.1\Reddit.Logic.pdb
