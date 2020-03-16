@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Reddit.Logic\Reddit.Logic.csproj" />
     <ProjectReference Include="..\Rettit.DAL\Rettit.DAL.csproj" />
     <ProjectReference Include="..\Rettit.Models\Rettit.Models.csproj" />
   </ItemGroup>

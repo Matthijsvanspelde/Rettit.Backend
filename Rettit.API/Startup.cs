@@ -4,9 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Reddit.Logic;
 using Rettit.DAL;
-using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace Rettit.API
 {
@@ -29,9 +28,19 @@ namespace Rettit.API
             });
 
             services.AddMvc();
-            services.AddDbContext<UserContext>(opt =>
-               opt.UseInMemoryDatabase("User"));
+            //services.AddDbContext<UserContext>(opt =>
+            //   opt.UseInMemoryDatabase("User"));
+                     
+            using (var dbContext = new UserContext())
+            {               
+                dbContext.Database.EnsureCreated();
+            }
+
             services.AddControllers();
+            services.AddScoped<IUserContext, UserContext>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserLogic, UserLogic>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
