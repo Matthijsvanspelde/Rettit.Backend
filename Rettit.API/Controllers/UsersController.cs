@@ -78,8 +78,18 @@ namespace Rettit.API.Controllers
         [HttpPost]
         public ActionResult<User> PostUser([FromBody]User user)
         {
-            _userLogic.AddUser(user);
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+
+            if (!_userLogic.UsernameExists(user))
+            {
+                _userLogic.AddUser(user);
+                return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            }
+            else 
+            {
+                return StatusCode(422);
+            }
+            
+                               
         }
         /*
         // DELETE: api/Users/5

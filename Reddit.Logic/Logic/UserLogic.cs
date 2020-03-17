@@ -1,7 +1,7 @@
 ﻿using Rettit.DAL;
 using Rettit.Models;
+using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Reddit.Logic
 {
@@ -14,11 +14,19 @@ namespace Reddit.Logic
             _userRepository = userRepository;
         }
 
-        public User AddUser(User user) 
+        public bool AddUser(User user) 
         {
-            _userRepository.AddUser(user);
-            return user;
+            if (user.Username.Length >= 5 && user.Password.Length >= 8)
+            {
+                return _userRepository.AddUser(user);                                   
+            }
+            else
+            {
+                return false;
+            }                       
         }
+
+        public bool UsernameExists(User user) => _userRepository.UsernameExists(user);
 
         public IEnumerable<User> GetUser()
         {

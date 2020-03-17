@@ -6,7 +6,8 @@ namespace Reddit.Logic
 {
     public interface IUserLogic
     {
-        public User AddUser(User user);
-        public IEnumerable<User> GetUser();
+        bool AddUser(User user);
+        bool UsernameExists(User user);
+        IEnumerable<User> GetUser();
     }
 }

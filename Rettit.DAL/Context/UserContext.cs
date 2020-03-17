@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Rettit.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Rettit.DAL
 {
@@ -16,11 +18,23 @@ namespace Rettit.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
 
-        public User AddUser(User user) 
+        public bool AddUser(User user) 
         {
             User.Add(user);
             SaveChangesAsync();
-            return user;
+            return true;        
+        }
+
+        public bool UsernameExists(User user) 
+        {
+            if (User.Any(o => o.Username == user.Username))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public IEnumerable<User> GetUser() => User;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Rettit.Models
+﻿namespace Rettit.Models
 {
     public class User
     {

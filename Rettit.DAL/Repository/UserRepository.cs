@@ -1,8 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Rettit.Models;
+﻿using Rettit.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Rettit.DAL
 {
@@ -15,11 +12,9 @@ namespace Rettit.DAL
             _userContext = userContext;
         }
 
-        public User AddUser(User user)
-        {
-            _userContext.AddUser(user);
-            return user;
-        }
+        public bool AddUser(User user) => _userContext.AddUser(user);
+
+        public bool UsernameExists(User user) => _userContext.UsernameExists(user);
 
         public IEnumerable<User> GetUser()
         {
