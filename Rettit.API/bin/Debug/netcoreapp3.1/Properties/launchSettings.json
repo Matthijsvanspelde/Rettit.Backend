@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Users",
+      "launchUrl": "api/Register",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,8 +20,8 @@
     "Rettit.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Users",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "launchUrl": "api/Register",
+      "applicationUrl": "https://localhost:44365;http://localhost:44365",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

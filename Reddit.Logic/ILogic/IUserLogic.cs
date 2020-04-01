@@ -9,5 +9,6 @@ namespace Reddit.Logic
         bool AddUser(User user);
         bool UsernameExists(User user);
         IEnumerable<User> GetUser();
+        User AuthenticateUser(User user);
     }
 }

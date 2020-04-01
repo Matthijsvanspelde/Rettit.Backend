@@ -14,17 +14,7 @@ namespace Reddit.Logic
             _userRepository = userRepository;
         }
 
-        public bool AddUser(User user) 
-        {
-            if (user.Username.Length >= 5 && user.Password.Length >= 8)
-            {
-                return _userRepository.AddUser(user);                                   
-            }
-            else
-            {
-                return false;
-            }                       
-        }
+        public bool AddUser(User user) => _userRepository.AddUser(user);
 
         public bool UsernameExists(User user) => _userRepository.UsernameExists(user);
 
@@ -34,5 +24,10 @@ namespace Reddit.Logic
             return users;
         }
 
+        public User AuthenticateUser(User user)
+        {
+            var myUser = _userRepository.AuthenticateUser(user);
+            return myUser;
+        }
     }
 }
