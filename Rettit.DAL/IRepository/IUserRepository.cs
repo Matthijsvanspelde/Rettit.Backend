@@ -7,7 +7,7 @@ namespace Rettit.DAL
     {
         bool AddUser(User user);
         bool UsernameExists(User user);
-        IEnumerable<User> GetUser();
+        IEnumerable<User> GetUsers();
         User AuthenticateUser(User user);
     }
 }

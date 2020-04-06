@@ -12,6 +12,8 @@ namespace Rettit.Models
         public long UserId { get; set; }
         public string Name { get; set; }
         public string About { get; set; }
-        public List<Rule> Rules { get; set; }
+        public string Rule1 { get; set; }
+        public string Rule2 { get; set; }
+        public string Rule3 { get; set; }
     }
 }

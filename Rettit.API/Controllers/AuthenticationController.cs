@@ -39,8 +39,8 @@ namespace Rettit.API.Controllers
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[]{
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Username)
+                    new Claim(ClaimTypes.NameIdentifier, myUser.Id.ToString()),
+                    new Claim(ClaimTypes.Name, myUser.Username)
 
                 }),
                     Issuer = "https://localhost:44339",

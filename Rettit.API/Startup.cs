@@ -7,7 +7,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Reddit.Logic;
+using Reddit.Logic.ILogic;
+using Reddit.Logic.Logic;
 using Rettit.DAL;
+using Rettit.DAL.IRepository;
+using Rettit.DAL.Repository;
 
 namespace Rettit.API
 {
@@ -39,6 +43,8 @@ namespace Rettit.API
             services.AddControllers();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserLogic, UserLogic>();
+            services.AddScoped<ISubForumRepository, SubForumRepository>();
+            services.AddScoped<ISubForumLogic, SubForumLogic>();
             services.AddScoped<Context>();
             services.AddAuthentication(options =>
             {

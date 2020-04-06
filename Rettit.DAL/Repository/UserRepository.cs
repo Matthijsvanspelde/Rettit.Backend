@@ -1,4 +1,5 @@
 ﻿using Rettit.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,9 +15,17 @@ namespace Rettit.DAL
 
         public bool AddUser(User user)
         {
-            _context.User.Add(user);
-            _context.SaveChangesAsync();
-            return true;
+            try
+            {
+                _context.User.Add(user);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
 
         public bool UsernameExists(User user)
@@ -31,17 +40,16 @@ namespace Rettit.DAL
             }
         }
 
-        public IEnumerable<User> GetUser() => _context.User;
+        public IEnumerable<User> GetUsers() => _context.User;
 
         public User AuthenticateUser(User user)
         {
             var myUser = _context.User.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
-
-            if (myUser != null)    //User was found
+            if (myUser != null)
             {
                 return myUser;
             }
-            else    //User was not found
+            else   
             {
                 return null;
             }

@@ -18,9 +18,9 @@ namespace Reddit.Logic
 
         public bool UsernameExists(User user) => _userRepository.UsernameExists(user);
 
-        public IEnumerable<User> GetUser()
+        public IEnumerable<User> GetUsers()
         {
-            IEnumerable<User> users = _userRepository.GetUser();
+            IEnumerable<User> users = _userRepository.GetUsers();
             return users;
         }
 

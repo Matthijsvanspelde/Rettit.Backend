@@ -23,24 +23,18 @@ namespace Rettit.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<User>> GetUser()
         {
-            IEnumerable<User> users = _userLogic.GetUser();
+            IEnumerable<User> users = _userLogic.GetUsers();
             return users.ToList();
         }
 
+        // POST: api/Register
         [HttpPost]
         public ActionResult<User> PostUser([FromBody]User user)
         {
-            if (user.Username != null || user.Password != null)
+            if (user.Username != null && user.Password != null && !_userLogic.UsernameExists(user))
             {
-                if (!_userLogic.UsernameExists(user))
-                {
-                    _userLogic.AddUser(user);
-                    return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
-                }
-                else
-                {
-                    return StatusCode(422);
-                }
+                _userLogic.AddUser(user);
+                return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
             }
             else
             {

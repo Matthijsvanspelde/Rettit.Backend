@@ -7,7 +7,6 @@ namespace Rettit.DAL
     {
         public DbSet<User> User { get; set; }
         public DbSet<SubForum> SubForum { get; set; }
-        public DbSet<Rule> SubForumRule { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) 
         {
