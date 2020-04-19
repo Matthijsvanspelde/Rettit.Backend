@@ -6,7 +6,8 @@ namespace Rettit.DAL
     public class Context : DbContext
     {
         public DbSet<User> User { get; set; }
-        public DbSet<SubForum> SubForum { get; set; }
+        public DbSet<SubForum> SubForum { get; set; } 
+        public DbSet<Post> Post { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) 
         {

@@ -43,9 +43,9 @@ namespace Rettit.DAL.Repository
 
         public IEnumerable<SubForum> GetSubForums() => _context.SubForum;
 
-        public SubForum GetSubForum(long id) 
+        public SubForum GetSubForum(string name) 
         {
-            var subForum = _context.SubForum.Find(id);
+            var subForum = _context.SubForum.SingleOrDefault(a => a.Name == name);
             return subForum;
         }
     }

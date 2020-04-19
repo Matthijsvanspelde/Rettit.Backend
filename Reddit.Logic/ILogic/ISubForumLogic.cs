@@ -8,6 +8,6 @@ namespace Reddit.Logic.ILogic
         bool CreateSubForum(SubForum subForum);
         bool SubforumExists(SubForum subForum);
         IEnumerable<SubForum> GetSubForums();
-        public SubForum GetSubForum(long id);
+        public SubForum GetSubForum(string name);
     }
 } 

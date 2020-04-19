@@ -31,3 +31,4 @@ C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.DAL\obj\Debug\netcoreap
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.csproj.CopyComplete
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.dll
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.DAL\obj\Debug\netcoreapp3.1\Rettit.DAL.csproj.CoreCompileInputs.cache

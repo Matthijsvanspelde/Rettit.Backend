@@ -11,3 +11,4 @@ C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.csproj.CopyComplete
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.dll
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.pdb
+C:\Users\Gebruiker\source\repos\Rettit.Backend\Reddit.Logic\obj\Debug\netcoreapp3.1\Reddit.Logic.csproj.CoreCompileInputs.cache

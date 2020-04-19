@@ -2,18 +2,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Reddit.Logic.ILogic;
-using Rettit.DAL;
 using Rettit.Models;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Web.Http.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]   
     [ApiController]
+    [EnableCors("AllowSpecificOrigin", "*", "*")]
     public class SubForumsController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;
@@ -31,10 +32,10 @@ namespace Rettit.API.Controllers
         }
 
         // GET: api/SubForums/5
-        [HttpGet("{id}")]
-        public ActionResult<SubForum> GetSubForum(long id)
+        [HttpGet("{name}")]
+        public ActionResult<SubForum> GetSubForum(string name)
         {
-            var subForum = _subForumLogic.GetSubForum(id);
+            var subForum = _subForumLogic.GetSubForum(name);
 
             if (subForum == null)
             {

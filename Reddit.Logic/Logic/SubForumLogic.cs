@@ -24,9 +24,9 @@ namespace Reddit.Logic.Logic
             return users;
         }
 
-        public SubForum GetSubForum(long id)
+        public SubForum GetSubForum(string name)
         {
-            var subForum = _subForumRepository.GetSubForum(id);
+            var subForum = _subForumRepository.GetSubForum(name);
             return subForum;
         }
     }
