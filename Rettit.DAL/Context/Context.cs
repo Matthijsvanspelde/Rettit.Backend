@@ -13,7 +13,7 @@ namespace Rettit.DAL
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) 
         {
             base.OnConfiguring(dbContextOptionsBuilder);
-            dbContextOptionsBuilder.UseSqlServer(@"Data Source=mssql.fhict.local;Initial Catalog=dbi404906_rettit;User ID=dbi404906_rettit;Password=123");
+            dbContextOptionsBuilder.UseSqlServer(@"Server=tcp:rettit.database.windows.net,1433;Initial Catalog=Rettit;Persist Security Info=False;User ID=rettitAdmin;Password=Ddba5030df7;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);

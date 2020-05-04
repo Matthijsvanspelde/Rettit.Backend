@@ -52,7 +52,7 @@ namespace Rettit.API
             services.AddScoped<ISubForumLogic, SubForumLogic>();
             services.AddScoped<IPostLogic, PostLogic>();
             services.AddScoped<IPostRepository, PostRepository>();
-            services.AddSingleton<Context>();
+            services.AddScoped<Context>();
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
