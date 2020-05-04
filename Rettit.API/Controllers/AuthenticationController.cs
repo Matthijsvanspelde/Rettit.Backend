@@ -3,16 +3,16 @@ using Microsoft.IdentityModel.Tokens;
 using Reddit.Logic;
 using Rettit.Models;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Authorization;
+using System.Web.Http.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IUserLogic _userLogic;
