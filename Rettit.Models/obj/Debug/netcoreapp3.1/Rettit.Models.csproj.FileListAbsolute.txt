@@ -23,3 +23,4 @@ C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.Models\obj\Debug\netcor
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.dll
 C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.pdb
 C:\Users\Gebruiker\source\repos\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.csproj.CoreCompileInputs.cache
+C:\Users\Matthijs\Documents\GitHub\Rettit.Backend\Rettit.Models\obj\Debug\netcoreapp3.1\Rettit.Models.csproj.CoreCompileInputs.cache
