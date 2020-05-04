@@ -10,12 +10,17 @@ namespace Rettit.Models
     {
         [Key]
         public long Id { get; set; }
-        [ForeignKey("User")]
-        public long UserId { get; set; }
-        [ForeignKey("SubForum")]
-        public long SubForumId { get; set; }
+        public List<Comment> Comments { get; set; }
+        
         public string Title { get; set; }
         public string Message { get; set; }
         public string Username { get; set; }
+
+        public int SubForumId { get; set; }
+        public SubForum SubForum { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
+
     }
 }

@@ -36,38 +36,6 @@ namespace Rettit.API.Controllers
             return _postLogic.GetPosts(SubForumId).ToList();
         }
 
-        // PUT: api/Posts/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPost(long id, Post post)
-        {
-            if (id != post.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(post).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PostExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/Posts
         [HttpPost]
         [Authorize]
@@ -102,11 +70,6 @@ namespace Rettit.API.Controllers
             await _context.SaveChangesAsync();
 
             return post;
-        }
-
-        private bool PostExists(long id)
-        {
-            return _context.Post.Any(e => e.Id == id);
         }
 
         private ClaimsPrincipal GetClaims(string token)

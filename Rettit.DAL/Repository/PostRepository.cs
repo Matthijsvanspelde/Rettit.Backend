@@ -1,4 +1,5 @@
-﻿using Rettit.DAL.IRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using Rettit.DAL.IRepository;
 using Rettit.Models;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace Rettit.DAL.Repository
             }           
         }
 
-        public IEnumerable<Post> GetPosts(long SubForumId) => _context.Post.Where(c => c.SubForumId == SubForumId).ToList();
+        public IEnumerable<Post> GetPosts(long SubForumId)
+        {
+            return _context.Post
+                .Where(c => c.SubForumId == SubForumId)
+                .Include(c => c.Comments)
+                .ThenInclude(c => c.User)
+                .ToList();
+        }
     }
 }

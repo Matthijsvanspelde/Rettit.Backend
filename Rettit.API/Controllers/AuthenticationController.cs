@@ -21,14 +21,7 @@ namespace Rettit.API.Controllers
         {
             _userLogic = userLogic;
         }
-
-        [HttpGet]
-        [Authorize]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2", "value3", "value4", "value5" };
-        }
-        
+      
         [HttpPost]
         public ActionResult<User> AuthenticateUser(User user)
         {
@@ -41,7 +34,6 @@ namespace Rettit.API.Controllers
                     Subject = new ClaimsIdentity(new Claim[]{
                     new Claim(ClaimTypes.NameIdentifier, myUser.Id.ToString()),
                     new Claim(ClaimTypes.Name, myUser.Username)
-
                 }),
                     Issuer = "https://localhost:44339",
                     Audience = "https://localhost:44339",

@@ -8,7 +8,8 @@ namespace Rettit.DAL
         public DbSet<User> User { get; set; }
         public DbSet<SubForum> SubForum { get; set; } 
         public DbSet<Post> Post { get; set; }
-
+        public DbSet<Comment> Comment { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) 
         {
             base.OnConfiguring(dbContextOptionsBuilder);

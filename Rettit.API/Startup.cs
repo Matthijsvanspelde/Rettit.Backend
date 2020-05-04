@@ -39,6 +39,11 @@ namespace Rettit.API
             {               
                 dbContext.Database.EnsureCreated();
             }
+
+            services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddSession();
             services.AddControllers();
             services.AddScoped<IUserRepository, UserRepository>();
