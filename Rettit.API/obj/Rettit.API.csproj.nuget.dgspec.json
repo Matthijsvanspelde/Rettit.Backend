@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj": {}
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
         "projectName": "Reddit.Logic",
-        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
               },
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
               }
             }
           }
@@ -62,24 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj",
         "projectName": "Rettit.API",
-        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.API\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.API\\Rettit.API.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,14 +86,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj"
               },
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj"
               },
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
               }
             }
           }
@@ -162,24 +156,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
         "projectName": "Rettit.DAL",
-        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\Rettit.DAL.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -192,8 +183,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
-                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
+              "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+                "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj"
               }
             }
           }
@@ -231,24 +222,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
         "projectName": "Rettit.Models",
-        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -286,7 +274,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

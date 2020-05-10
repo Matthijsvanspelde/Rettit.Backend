@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Reddit.Logic.ILogic;
 using Rettit.DAL;
@@ -17,7 +16,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("AllowSpecificOrigin", "*", "*")]
+    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
     public class PostsController : ControllerBase
     {
         private readonly Context _context;

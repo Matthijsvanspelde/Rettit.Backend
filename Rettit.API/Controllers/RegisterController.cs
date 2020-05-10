@@ -9,7 +9,8 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("AllowSpecificOrigin", "*", "*")]
+    //[EnableCors("AllowSpecificOrigin", "*", "*")]
+    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
     public class RegisterController : ControllerBase
     {
         private readonly IUserLogic _userLogic;

@@ -14,7 +14,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]   
     [ApiController]
-    [EnableCors("AllowSpecificOrigin", "*", "*")]
+    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
     public class SubForumsController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;
