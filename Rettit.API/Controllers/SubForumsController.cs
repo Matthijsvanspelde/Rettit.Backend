@@ -31,7 +31,7 @@ namespace Rettit.API.Controllers
             return _subForumLogic.GetSubForums().ToList();
         }
 
-        // GET: api/SubForums/5
+        // GET: api/SubForums/name
         [HttpGet("{name}")]
         public ActionResult<SubForum> GetSubForum(string name)
         {

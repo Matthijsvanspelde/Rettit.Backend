@@ -29,5 +29,11 @@ namespace Reddit.Logic.Logic
             var subForum = _subForumRepository.GetSubForum(name);
             return subForum;
         }
+
+        public IEnumerable<SubForum> GetSearchedSubForum(string name)
+        {
+            var subForum = _subForumRepository.GetSearchedSubForum(name);
+            return subForum;
+        }
     }
 }

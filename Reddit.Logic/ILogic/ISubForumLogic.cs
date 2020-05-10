@@ -9,5 +9,6 @@ namespace Reddit.Logic.ILogic
         bool SubforumExists(SubForum subForum);
         IEnumerable<SubForum> GetSubForums();
         public SubForum GetSubForum(string name);
+        public IEnumerable<SubForum> GetSearchedSubForum(string name);
     }
 } 

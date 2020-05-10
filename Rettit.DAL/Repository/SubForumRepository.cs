@@ -48,5 +48,12 @@ namespace Rettit.DAL.Repository
             var subForum = _context.SubForum.SingleOrDefault(a => a.Name == name);
             return subForum;
         }
+
+        public IEnumerable<SubForum> GetSearchedSubForum(string name)
+        {
+            return _context.SubForum
+                .Where(c => c.Name.Contains(name))
+                .ToList();
+        }
     }
 }
