@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {}
+    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
+    "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
         "projectName": "Rettit.Models",
-        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
-        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Rettit.Backend\\Rettit.Models\\obj\\",
+        "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
+        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
