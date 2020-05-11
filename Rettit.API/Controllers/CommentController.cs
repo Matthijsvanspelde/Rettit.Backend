@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -15,7 +16,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
+    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
     public class CommentController : ControllerBase
     {
         private readonly ICommentLogic _commentLogic;
@@ -26,6 +27,7 @@ namespace Rettit.API.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult<Comment> PostComment(Comment comment) 
         {
             string authHeaderValue = Request.Headers["Authorization"];

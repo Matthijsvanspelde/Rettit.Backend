@@ -16,7 +16,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors(origins: "http://rettit.azurewebsites.net", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PostsController : ControllerBase
     {
         private readonly Context _context;

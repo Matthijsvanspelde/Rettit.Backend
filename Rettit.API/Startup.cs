@@ -30,7 +30,7 @@ namespace Rettit.API
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("https://localhost:44339", "https://rettit.azurewebsites.net")
+                    builder => builder.WithOrigins("https://rettit.azurewebsites.net")
                     
                     );
             });
@@ -83,7 +83,7 @@ namespace Rettit.API
             }
             
             app.UseCors(builder =>
-            builder.WithOrigins("https://localhost:44339", "https://rettit.azurewebsites.net")
+            builder.WithOrigins("https://rettit.azurewebsites.net")
            .AllowAnyHeader()
            .AllowAnyMethod()
             );

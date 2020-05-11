@@ -12,7 +12,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("AllowSpecificOrigin", "*", "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SearchController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;
