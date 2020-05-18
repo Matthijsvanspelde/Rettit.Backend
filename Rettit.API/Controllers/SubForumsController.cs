@@ -8,13 +8,13 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]   
     [ApiController]
-    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class SubForumsController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;

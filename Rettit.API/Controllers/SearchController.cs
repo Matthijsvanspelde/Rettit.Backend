@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Reddit.Logic.ILogic;
@@ -12,7 +12,7 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class SearchController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;

@@ -10,8 +10,8 @@ using Rettit.DAL;
 namespace Rettit.DAL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200420084856_Add-migration Initial")]
-    partial class AddmigrationInitial
+    [Migration("20200518093612_Newmigg")]
+    partial class Newmigg
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,20 +31,20 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("PostIdId")
+                    b.Property<long?>("PostId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("Posted")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UserIdId")
+                    b.Property<long?>("UserId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PostIdId");
+                    b.HasIndex("PostId");
 
-                    b.HasIndex("UserIdId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comment");
                 });
@@ -59,13 +59,13 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("SubForumIdId")
+                    b.Property<long?>("SubForumId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UserIdId")
+                    b.Property<long?>("UserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Username")
@@ -73,9 +73,9 @@ namespace Rettit.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SubForumIdId");
+                    b.HasIndex("SubForumId");
 
-                    b.HasIndex("UserIdId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Post");
                 });
@@ -102,12 +102,12 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Rule3")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UserIdId")
+                    b.Property<long?>("UserId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserIdId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("SubForum");
                 });
@@ -132,31 +132,31 @@ namespace Rettit.DAL.Migrations
 
             modelBuilder.Entity("Rettit.Models.Comment", b =>
                 {
-                    b.HasOne("Rettit.Models.Post", "PostId")
+                    b.HasOne("Rettit.Models.Post", "Post")
                         .WithMany("Comments")
-                        .HasForeignKey("PostIdId");
+                        .HasForeignKey("PostId");
 
-                    b.HasOne("Rettit.Models.User", "UserId")
+                    b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("UserIdId");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Rettit.Models.Post", b =>
                 {
-                    b.HasOne("Rettit.Models.SubForum", "SubForumId")
+                    b.HasOne("Rettit.Models.SubForum", "SubForum")
                         .WithMany("Posts")
-                        .HasForeignKey("SubForumIdId");
+                        .HasForeignKey("SubForumId");
 
-                    b.HasOne("Rettit.Models.User", "UserId")
+                    b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Posts")
-                        .HasForeignKey("UserIdId");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Rettit.Models.SubForum", b =>
                 {
-                    b.HasOne("Rettit.Models.User", "UserId")
+                    b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Subforums")
-                        .HasForeignKey("UserIdId");
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

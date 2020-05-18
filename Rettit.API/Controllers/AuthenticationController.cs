@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Reddit.Logic;
 using Rettit.Models;
@@ -6,13 +7,12 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Web.Http.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IUserLogic _userLogic;

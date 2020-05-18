@@ -29,10 +29,14 @@ namespace Rettit.API
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("https://rettit.azurewebsites.net")
-                    
-                    );
+                // this defines a CORS policy called "default"
+                options.AddPolicy("_myAllowSpecificOrigins", policy =>
+                {
+                    policy.WithOrigins("https://localhost:44339", "https://rettit.azurewebsites.net")
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+            });
             });
 
             services.AddMvc();
@@ -54,6 +58,8 @@ namespace Rettit.API
             services.AddScoped<ISubForumLogic, SubForumLogic>();
             services.AddScoped<IPostLogic, PostLogic>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ICommentLogic, CommentLogic>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<Context>();
             services.AddAuthentication(options =>
             {
@@ -81,14 +87,11 @@ namespace Rettit.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            
-            app.UseCors(builder =>
-            builder.WithOrigins("https://rettit.azurewebsites.net")
-           .AllowAnyHeader()
-           .AllowAnyMethod()
-            );
-            app.UseHttpsRedirection();
+            app.UseDeveloperExceptionPage();
+
+            app.UseHttpsRedirection();           
             app.UseRouting();
+            app.UseCors("_myAllowSpecificOrigins");
             app.UseAuthentication(); //This one first
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

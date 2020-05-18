@@ -17,16 +17,9 @@ namespace Rettit.DAL.Repository
 
         public bool CreateSubForum(SubForum subForum) 
         {
-            try
-            {
                 _context.SubForum.Add(subForum);
                 _context.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }           
+                return true;    
         }
 
         public bool SubforumExists(SubForum subForum)

@@ -10,13 +10,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class PostsController : ControllerBase
     {
         private readonly Context _context;
@@ -38,7 +38,7 @@ namespace Rettit.API.Controllers
         // POST: api/Posts
         [HttpPost]
         [Authorize]
-        public ActionResult<Post> PostPost(Post post)
+        public ActionResult<Post> PostPost([FromBody]Post post)
         {
             string authHeaderValue = Request.Headers["Authorization"];
             var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());

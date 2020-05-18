@@ -3,14 +3,13 @@ using Reddit.Logic;
 using Rettit.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Cors;
 
 namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[EnableCors("AllowSpecificOrigin", "*", "*")]
-    [EnableCors(origins: "AllowSpecificOrigin", headers: "*", methods: "*")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class RegisterController : ControllerBase
     {
         private readonly IUserLogic _userLogic;
