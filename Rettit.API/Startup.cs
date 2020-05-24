@@ -33,7 +33,6 @@ namespace Rettit.API
                 options.AddPolicy("_myAllowSpecificOrigins", policy =>
                 {
                     policy.WithOrigins("https://rettit.azurewebsites.net")
-                        .AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader();
             });
@@ -60,6 +59,8 @@ namespace Rettit.API
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<ICommentLogic, CommentLogic>();
             services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IFollowLogic, FollowLogic>();
+            services.AddScoped<IFollowRepository, FollowRepository>();
             services.AddScoped<Context>();
             services.AddAuthentication(options =>
             {
