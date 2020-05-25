@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Rettit.DAL.Migrations
 {
-    public partial class Newmigg : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,7 +32,7 @@ namespace Rettit.DAL.Migrations
                     Rule1 = table.Column<string>(nullable: true),
                     Rule2 = table.Column<string>(nullable: true),
                     Rule3 = table.Column<string>(nullable: true),
-                    UserId = table.Column<long>(nullable: true)
+                    UserId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,7 +42,33 @@ namespace Rettit.DAL.Migrations
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Follow",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<long>(nullable: false),
+                    SubForumId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Follow", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Follow_SubForum_SubForumId",
+                        column: x => x.SubForumId,
+                        principalTable: "SubForum",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Follow_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,8 +80,8 @@ namespace Rettit.DAL.Migrations
                     Title = table.Column<string>(nullable: true),
                     Message = table.Column<string>(nullable: true),
                     Username = table.Column<string>(nullable: true),
-                    SubForumId = table.Column<long>(nullable: true),
-                    UserId = table.Column<long>(nullable: true)
+                    SubForumId = table.Column<long>(nullable: false),
+                    UserId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,13 +91,13 @@ namespace Rettit.DAL.Migrations
                         column: x => x.SubForumId,
                         principalTable: "SubForum",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Post_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -82,8 +108,8 @@ namespace Rettit.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Message = table.Column<string>(nullable: true),
                     Posted = table.Column<DateTime>(nullable: false),
-                    PostId = table.Column<long>(nullable: true),
-                    UserId = table.Column<long>(nullable: true)
+                    PostId = table.Column<long>(nullable: false),
+                    UserId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,13 +119,13 @@ namespace Rettit.DAL.Migrations
                         column: x => x.PostId,
                         principalTable: "Post",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comment_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -110,6 +136,16 @@ namespace Rettit.DAL.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Comment_UserId",
                 table: "Comment",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Follow_SubForumId",
+                table: "Follow",
+                column: "SubForumId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Follow_UserId",
+                table: "Follow",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -132,6 +168,9 @@ namespace Rettit.DAL.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Comment");
+
+            migrationBuilder.DropTable(
+                name: "Follow");
 
             migrationBuilder.DropTable(
                 name: "Post");

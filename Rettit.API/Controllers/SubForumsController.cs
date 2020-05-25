@@ -14,7 +14,6 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]   
     [ApiController]
-    [EnableCors("_myAllowSpecificOrigins")]
     public class SubForumsController : ControllerBase
     {
         private readonly ISubForumLogic _subForumLogic;

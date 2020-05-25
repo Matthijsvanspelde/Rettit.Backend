@@ -32,7 +32,7 @@ namespace Rettit.API
                 // this defines a CORS policy called "default"
                 options.AddPolicy("_myAllowSpecificOrigins", policy =>
                 {
-                    policy.WithOrigins("https://rettit.azurewebsites.net")
+                    policy.WithOrigins("https://rettit.azurewebsites.net", "https://localhost:44339")
                         .AllowAnyMethod()
                         .AllowAnyHeader();
             });

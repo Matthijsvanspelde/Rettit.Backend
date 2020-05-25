@@ -11,8 +11,10 @@ namespace Rettit.Models
         [Key]
         public long Id { get; set; }
         [NotMapped]
+        [Required]
         public long UserId { get; set; }
         [ForeignKey("UserId")]
+        [Required]
         public User User { get; set; }
         [NotMapped]
         public long SubForumId { get; set; }

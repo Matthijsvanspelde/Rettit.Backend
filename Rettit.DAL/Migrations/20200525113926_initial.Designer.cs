@@ -10,8 +10,8 @@ using Rettit.DAL;
 namespace Rettit.DAL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200518093612_Newmigg")]
-    partial class Newmigg
+    [Migration("20200525113926_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,13 +31,13 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("PostId")
+                    b.Property<long>("PostId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("Posted")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UserId")
+                    b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -47,6 +47,28 @@ namespace Rettit.DAL.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comment");
+                });
+
+            modelBuilder.Entity("Rettit.Models.Follow", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("SubForumId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubForumId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Follow");
                 });
 
             modelBuilder.Entity("Rettit.Models.Post", b =>
@@ -59,13 +81,13 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("SubForumId")
+                    b.Property<long>("SubForumId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UserId")
+                    b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Username")
@@ -102,7 +124,7 @@ namespace Rettit.DAL.Migrations
                     b.Property<string>("Rule3")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UserId")
+                    b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -134,29 +156,54 @@ namespace Rettit.DAL.Migrations
                 {
                     b.HasOne("Rettit.Models.Post", "Post")
                         .WithMany("Comments")
-                        .HasForeignKey("PostId");
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Rettit.Models.Follow", b =>
+                {
+                    b.HasOne("Rettit.Models.SubForum", "SubForum")
+                        .WithMany()
+                        .HasForeignKey("SubForumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rettit.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Rettit.Models.Post", b =>
                 {
                     b.HasOne("Rettit.Models.SubForum", "SubForum")
                         .WithMany("Posts")
-                        .HasForeignKey("SubForumId");
+                        .HasForeignKey("SubForumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Posts")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Rettit.Models.SubForum", b =>
                 {
                     b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Subforums")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -16,7 +16,6 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("_myAllowSpecificOrigins")]
     public class CommentController : ControllerBase
     {
         private readonly ICommentLogic _commentLogic;

@@ -16,7 +16,6 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("_myAllowSpecificOrigins")]
     public class PostsController : ControllerBase
     {
         private readonly Context _context;

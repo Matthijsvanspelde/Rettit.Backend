@@ -47,6 +47,28 @@ namespace Rettit.DAL.Migrations
                     b.ToTable("Comment");
                 });
 
+            modelBuilder.Entity("Rettit.Models.Follow", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("SubForumId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubForumId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Follow");
+                });
+
             modelBuilder.Entity("Rettit.Models.Post", b =>
                 {
                     b.Property<long>("Id")
@@ -138,6 +160,21 @@ namespace Rettit.DAL.Migrations
 
                     b.HasOne("Rettit.Models.User", "User")
                         .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Rettit.Models.Follow", b =>
+                {
+                    b.HasOne("Rettit.Models.SubForum", "SubForum")
+                        .WithMany()
+                        .HasForeignKey("SubForumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rettit.Models.User", "User")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
