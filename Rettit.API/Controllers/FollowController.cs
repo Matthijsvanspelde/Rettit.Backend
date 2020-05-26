@@ -16,7 +16,6 @@ namespace Rettit.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class FollowController : ControllerBase
     {
         private readonly Context _context;
@@ -29,42 +28,42 @@ namespace Rettit.API.Controllers
 
         // GET: api/Follow
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Follow>>> GetFollow()
+        public ActionResult<Follow> GetFollow()
         {
-            return await _context.Follow.ToListAsync();
+            string authHeaderValue = Request.Headers["Authorization"];
+            var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());
+            var id = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
+            var exists = _followLogic.FollowExists(id);
+            return Ok(exists);
         }
 
-        // GET: api/Follow/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Follow>> GetFollow(long id)
-        {
-            var follow = await _context.Follow.FindAsync(id);
-
-            if (follow == null)
-            {
-                return NotFound();
-            }
-
-            return follow;
-        }
 
         // POST: api/Follow
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public ActionResult<Follow> PostFollow(Follow follow)
+        [Authorize]
+        public ActionResult<Follow> PostFollow([FromBody]Follow follow)
         {
             string authHeaderValue = Request.Headers["Authorization"];
             var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());
             follow.UserId = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
-            if (_followLogic.AddFollow(follow))
+            if (!FollowExists(follow))
             {
-                return Ok("Subscribed");
+                if (_followLogic.AddFollow(follow))
+                {
+                    return Ok("Subscribed");
+                }
+                else
+                {
+                    return StatusCode(422);
+                }
             }
             else
             {
-                return StatusCode(422);
+                return StatusCode(409, "Already subscribed");
             }
+            
         }
 
         // DELETE: api/Follow/5
@@ -83,9 +82,9 @@ namespace Rettit.API.Controllers
             return follow;
         }
 
-        private bool FollowExists(long id)
+        private bool FollowExists(Follow follow)
         {
-            return _context.Follow.Any(e => e.Id == id);
+            return _followLogic.FollowExists(follow);
         }
 
         private ClaimsPrincipal GetClaims(string token)
