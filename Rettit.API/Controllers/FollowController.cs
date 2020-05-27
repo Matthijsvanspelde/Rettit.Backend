@@ -27,13 +27,15 @@ namespace Rettit.API.Controllers
         }
 
         // GET: api/Follow
-        [HttpGet]
-        public ActionResult<Follow> GetFollow()
+        [HttpGet("{SubForumId}")]
+        public ActionResult<Follow> GetFollow(long SubForumId)
         {
+            Follow follow = new Follow();
+            follow.SubForumId = SubForumId;
             string authHeaderValue = Request.Headers["Authorization"];
             var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());
-            var id = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
-            var exists = _followLogic.FollowExists(id);
+            follow.UserId = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
+            var exists = _followLogic.FollowExists(follow);
             return Ok(exists);
         }
 
@@ -67,19 +69,31 @@ namespace Rettit.API.Controllers
         }
 
         // DELETE: api/Follow/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Follow>> DeleteFollow(long id)
+        [HttpDelete("{SubForumId}")]
+        [Authorize]
+        public ActionResult<Follow> DeleteFollow(long subForumId)
         {
-            var follow = await _context.Follow.FindAsync(id);
-            if (follow == null)
+            Follow follow = new Follow();
+            follow.SubForumId = subForumId;
+            string authHeaderValue = Request.Headers["Authorization"];
+            var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());
+            follow.UserId = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
+            if (FollowExists(follow))
             {
-                return NotFound();
+                if (_followLogic.RemoveFollow(follow))
+                {
+                    return Ok("Unsubscribed");
+                }
+                else
+                {
+                    return StatusCode(404);
+                }
             }
-
-            _context.Follow.Remove(follow);
-            await _context.SaveChangesAsync();
-
-            return follow;
+            else
+            {
+                return StatusCode(409, "Not subscribed");
+            }
+            
         }
 
         private bool FollowExists(Follow follow)

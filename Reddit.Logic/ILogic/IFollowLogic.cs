@@ -6,5 +6,6 @@ namespace Reddit.Logic.ILogic
     {
         bool AddFollow(Follow follow);
         bool FollowExists(Follow follow);
+        bool RemoveFollow(Follow follow);
     }
 }

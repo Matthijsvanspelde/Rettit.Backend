@@ -15,9 +15,8 @@ namespace Reddit.Logic.Logic
 
         public bool AddFollow(Follow follow) => _followRepository.AddFollow(follow);
 
-        public bool FollowExists(Follow follow) 
-        {
-            return _followRepository.FollowExists(follow);
-        }
+        public bool FollowExists(Follow follow) => _followRepository.FollowExists(follow);
+
+        public bool RemoveFollow(Follow follow) => _followRepository.RemoveFollow(follow);
     }
 }

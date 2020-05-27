@@ -6,5 +6,6 @@ namespace Rettit.DAL.IRepository
     {
         bool AddFollow(Follow follow);
         bool FollowExists(Follow follow);
+        bool RemoveFollow(Follow follow);
     }
 }

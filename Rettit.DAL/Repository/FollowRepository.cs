@@ -29,9 +29,27 @@ namespace Rettit.DAL.Repository
             
         }
 
-        public bool DeleteFollow(Follow follow) 
-        { 
-        
+        public bool RemoveFollow(Follow follow) 
+        {
+            try
+            {
+                var itemToRemove = _context.Follow.FirstOrDefault(e => e.UserId == follow.UserId && e.SubForumId == follow.SubForumId);
+                if (itemToRemove == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    _context.Follow.Remove(itemToRemove);
+                    _context.SaveChanges();
+                    return true;
+                }               
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
 
         public bool FollowExists(Follow follow) 
