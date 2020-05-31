@@ -1,22 +1,62 @@
 ﻿using Reddit.Logic.ILogic;
-using Rettit.DAL.IRepository;
+using Rettit.DAL;
 using Rettit.Models;
+using System;
+using System.Linq;
 
 namespace Reddit.Logic.Logic
 {
     public class FollowLogic : IFollowLogic
     {
-        private readonly IFollowRepository _followRepository;
+        private readonly Context _context;
 
-        public FollowLogic(IFollowRepository followRepository) 
+        public FollowLogic(Context context)
         {
-            _followRepository = followRepository;
+            _context = context;
         }
 
-        public bool AddFollow(Follow follow) => _followRepository.AddFollow(follow);
+        public bool AddFollow(Follow follow)
+        {
+            try
+            {
+                _context.Follow.Add(follow);
+                _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
 
-        public bool FollowExists(Follow follow) => _followRepository.FollowExists(follow);
+        }
 
-        public bool RemoveFollow(Follow follow) => _followRepository.RemoveFollow(follow);
+        public bool RemoveFollow(Follow follow)
+        {
+            try
+            {
+                var itemToRemove = _context.Follow.FirstOrDefault(e => e.UserId == follow.UserId && e.SubForumId == follow.SubForumId);
+                if (itemToRemove == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    _context.Follow.Remove(itemToRemove);
+                    _context.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+        public bool FollowExists(Follow follow)
+        {
+            return _context.Follow.Any(e => e.UserId == follow.UserId && e.SubForumId == follow.SubForumId);
+        }
     }
 }
+

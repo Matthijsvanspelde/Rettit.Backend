@@ -1,18 +1,31 @@
 ﻿using Reddit.Logic.ILogic;
-using Rettit.DAL.IRepository;
+using Rettit.DAL;
 using Rettit.Models;
+using System;
 
 namespace Reddit.Logic.Logic
 {
     public class CommentLogic : ICommentLogic
     {
-        private readonly ICommentRepository _commentRepository;
+        private readonly Context _context;
 
-        public CommentLogic(ICommentRepository commentRepository) 
+        public CommentLogic(Context context)
         {
-            _commentRepository = commentRepository;
+            _context = context;
         }
 
-        public bool AddComment(Comment comment) => _commentRepository.AddComment(comment);
+        public bool AddComment(Comment comment)
+        {
+            try
+            {
+                _context.Comment.Add(comment);
+                _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -1,21 +1,48 @@
-﻿using Reddit.Logic.ILogic;
-using Rettit.DAL.IRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using Reddit.Logic.ILogic;
+using Rettit.DAL;
 using Rettit.Models;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Reddit.Logic.Logic
 {
     public class PostLogic : IPostLogic
     {
-        private readonly IPostRepository _postRepository;
+        private readonly Context _context;
 
-        public PostLogic(IPostRepository postRepository) 
+        public PostLogic(Context context)
         {
-            _postRepository = postRepository;
+            _context = context;
         }
 
-        public bool AddPost(Post post) => _postRepository.AddPost(post);
+        public bool AddPost(Post post)
+        {
+            try
+            {
+                _context.Post.Add(post);
+                _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
-        public IEnumerable<Post> GetPosts(long SubForumId) => _postRepository.GetPosts(SubForumId);
+        public IEnumerable<Post> GetPosts(long SubForumId)
+        {
+            return _context.Post
+                .Where(c => c.SubForumId == SubForumId)
+                .Include(c => c.Comments)
+                .ThenInclude(c => c.User)
+                .ToList();
+        }
+
+        public IEnumerable<Post> GetSubscribedPosts(long userId) 
+        {
+            return null;
+        }
     }
 }

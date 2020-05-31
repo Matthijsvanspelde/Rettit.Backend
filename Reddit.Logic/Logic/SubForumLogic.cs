@@ -1,39 +1,52 @@
 ﻿using Reddit.Logic.ILogic;
-using Rettit.DAL.IRepository;
+using Rettit.DAL;
 using Rettit.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Reddit.Logic.Logic
 {
     public class SubForumLogic : ISubForumLogic
     {
-        private readonly ISubForumRepository _subForumRepository;
+        private readonly Context _context;
 
-        public SubForumLogic(ISubForumRepository subForumRepository) 
+        public SubForumLogic(Context context)
         {
-            _subForumRepository = subForumRepository;
+            _context = context;
         }
 
-        public bool CreateSubForum(SubForum subForum) => _subForumRepository.CreateSubForum(subForum);
-
-        public bool SubforumExists(SubForum subForum) => _subForumRepository.SubforumExists(subForum);
-
-        public IEnumerable<SubForum> GetSubForums() 
+        public bool CreateSubForum(SubForum subForum)
         {
-            IEnumerable<SubForum> users = _subForumRepository.GetSubForums();
-            return users;
+            _context.SubForum.Add(subForum);
+            _context.SaveChanges();
+            return true;
         }
+
+        public bool SubforumExists(SubForum subForum)
+        {
+            if (_context.SubForum.Any(o => o.Name == subForum.Name))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public IEnumerable<SubForum> GetSubForums() => _context.SubForum;
 
         public SubForum GetSubForum(string name)
         {
-            var subForum = _subForumRepository.GetSubForum(name);
+            var subForum = _context.SubForum.SingleOrDefault(a => a.Name == name);
             return subForum;
         }
 
         public IEnumerable<SubForum> GetSearchedSubForum(string name)
         {
-            var subForum = _subForumRepository.GetSearchedSubForum(name);
-            return subForum;
+            return _context.SubForum
+                .Where(c => c.Name.Contains(name))
+                .ToList();
         }
     }
 }

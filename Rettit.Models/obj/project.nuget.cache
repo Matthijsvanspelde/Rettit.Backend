@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LtLdkAhGXX94E/Chh9mCIJu2+flXkNlYVTRs4hHk/7lr9nXTej9U164SIILTygAr3OIP+oa0CXimlzAS+9WIug==",
+  "dgSpecHash": "+zqbw3TwmDZ3Zlt1GVnvM00QYlG0IiaQ97JKmySTJG++aFafhoOKbrLOLc1lDCaakufXGVvuzkfwfsBnWOVbgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Rettit.Models\\Rettit.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

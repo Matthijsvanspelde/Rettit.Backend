@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ms1SDPdwezuFseXyOE8ipSxgUv9bfQx9x0SDDAmYidc1s3Oz/jUkssfS3SmA/6/KwA7mCN3+eyHh157ekcDEoA==",
+  "dgSpecHash": "8eLcTXyKt99Ro83hLSVC0psE+HDAcrY2a+J2RHPorpUqVET6h5ep2deVB5vER4ANStGNYo6yZmqghGLKXtD+vw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gebruiker\\source\\repos\\Rettit.Backend\\Reddit.Logic\\Reddit.Logic.csproj",
   "expectedPackageFiles": [
@@ -90,7 +90,8 @@
     "C:\\Users\\Gebruiker\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
