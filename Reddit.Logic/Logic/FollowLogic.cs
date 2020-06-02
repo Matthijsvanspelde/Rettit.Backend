@@ -1,7 +1,9 @@
-﻿using Reddit.Logic.ILogic;
+﻿using Microsoft.EntityFrameworkCore;
+using Reddit.Logic.ILogic;
 using Rettit.DAL;
 using Rettit.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Reddit.Logic.Logic
@@ -56,6 +58,17 @@ namespace Reddit.Logic.Logic
         public bool FollowExists(Follow follow)
         {
             return _context.Follow.Any(e => e.UserId == follow.UserId && e.SubForumId == follow.SubForumId);
+        }
+
+        public IEnumerable<Follow> GetSubscribedPosts(long UserId)
+        {
+            var posts = _context.Follow
+                .Where(c => c.UserId == UserId)
+                .Include(c => c.SubForum)
+                .ThenInclude(c => c.Posts)
+                .ThenInclude(c => c.Comments)
+                .ToList();
+            return posts;
         }
     }
 }

@@ -7,7 +7,6 @@ namespace Reddit.Logic.ILogic
     {
         bool AddPost(Post post);
         IEnumerable<Post> GetPosts(long SubForumId);
-        IEnumerable<Post> GetSubscribedPosts(long userId);
     }
 }
  

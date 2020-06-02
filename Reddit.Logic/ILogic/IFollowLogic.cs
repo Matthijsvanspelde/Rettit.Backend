@@ -1,4 +1,5 @@
 ﻿using Rettit.Models;
+using System.Collections.Generic;
 
 namespace Reddit.Logic.ILogic
 {
@@ -7,5 +8,6 @@ namespace Reddit.Logic.ILogic
         bool AddFollow(Follow follow);
         bool FollowExists(Follow follow);
         bool RemoveFollow(Follow follow);
+        IEnumerable<Follow> GetSubscribedPosts(long userId);
     }
 }

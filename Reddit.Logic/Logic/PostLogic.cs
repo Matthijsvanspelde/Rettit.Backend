@@ -39,10 +39,5 @@ namespace Reddit.Logic.Logic
                 .ThenInclude(c => c.User)
                 .ToList();
         }
-
-        public IEnumerable<Post> GetSubscribedPosts(long userId) 
-        {
-            return null;
-        }
     }
 }

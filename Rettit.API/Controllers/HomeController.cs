@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -16,21 +17,22 @@ namespace Rettit.API.Controllers
     [ApiController]
     public class HomeController : ControllerBase
     {
-        private readonly IPostLogic _postLogic;
+        private readonly IFollowLogic _followLogic;
 
-        public HomeController(IPostLogic postLogic) 
+        public HomeController(IFollowLogic followLogic) 
         {
-            _postLogic = postLogic;
+            _followLogic = followLogic;
         }
 
         // GET: api/Posts
         [HttpGet]
-        public ActionResult<IEnumerable<Post>> GetPosts()
+        [Authorize]
+        public ActionResult<IEnumerable<Follow>> GetPosts()
         {
             string authHeaderValue = Request.Headers["Authorization"];
             var tokenClaims = GetClaims(authHeaderValue.Substring("Bearer ".Length).Trim());
             var userId = Convert.ToInt32(tokenClaims.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
-            return _postLogic.GetSubscribedPosts(userId).ToList();
+            return _followLogic.GetSubscribedPosts(userId).ToList();
         }
 
         private ClaimsPrincipal GetClaims(string token)
